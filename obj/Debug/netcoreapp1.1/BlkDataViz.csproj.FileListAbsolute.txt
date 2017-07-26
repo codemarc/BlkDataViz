@@ -1,8 +1,0 @@
-/Users/mg01685/dotnet/BlkDataViz/bin/Debug/netcoreapp1.1/BlkDataViz.deps.json
-/Users/mg01685/dotnet/BlkDataViz/bin/Debug/netcoreapp1.1/BlkDataViz.runtimeconfig.json
-/Users/mg01685/dotnet/BlkDataViz/bin/Debug/netcoreapp1.1/BlkDataViz.runtimeconfig.dev.json
-/Users/mg01685/dotnet/BlkDataViz/bin/Debug/netcoreapp1.1/BlkDataViz.dll
-/Users/mg01685/dotnet/BlkDataViz/bin/Debug/netcoreapp1.1/BlkDataViz.pdb
-/Users/mg01685/dotnet/BlkDataViz/obj/Debug/netcoreapp1.1/BlkDataViz.AssemblyInfo.cs
-/Users/mg01685/dotnet/BlkDataViz/obj/Debug/netcoreapp1.1/BlkDataViz.dll
-/Users/mg01685/dotnet/BlkDataViz/obj/Debug/netcoreapp1.1/BlkDataViz.pdb

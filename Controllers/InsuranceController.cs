@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Insurance.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+
 //using Microsoft.AnalysisServices.Core;
 
  
@@ -31,7 +33,7 @@ namespace BlkDataViz.Controllers
          // GET /api/insurance/homeowners/1/carriers
         [Route("homeowners/{buildingId:int}/carriers")]
         public IEnumerable<Carriers> GetInsuranceHomeownersCarriersByBuilding(int buildingId) { 
-
+            // string output = this.HttpContext.Request.Query["output"];
             //AdomdDataAdapter da = new AdomdDataAdapter();
 
             Carriers[] c  = new Carriers[2];
@@ -39,6 +41,21 @@ namespace BlkDataViz.Controllers
             c[1]=new Carriers("Lemonade",57);
             return c;
         }
+
+        // GET /api/insurance/homeowners/1/carriers
+        [Route("homeowners/{buildingId:int}/carriers/anychart")]
+        public JArray GetInsuranceHomeownersCarriersByBuildingAsAnyChart(int buildingId) { 
+            JArray ar = new JArray();
+            foreach(Carriers carrier in  GetInsuranceHomeownersCarriersByBuilding(buildingId) ) {
+                JObject o = new JObject();
+                o.Add("x",carrier.Name);
+                o.Add("value",carrier.Value);
+                o.Add("ptext","Policies");
+                ar.Add(o);
+            }
+            return ar;
+        }
+
 
         // GET api/insurance/5
         [HttpGet("homeowners/{id}")]
