@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Insurance.Models
 {
@@ -8,7 +9,10 @@ namespace Insurance.Models
             this.Name = name;
             this.Value = value;
         }
+
+        [Required]
         public string Name { get; set; }        
+
         public int Value { get; set; }        
     }
 
